@@ -1,0 +1,180 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F2F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    background-image: url('img/backgroundapk2.png');
+}
+
+/* Container Styles */
+.container {
+    background-image: url('img/backgroundapk2.png'); /* Tło kontenera */
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Styles */
+.logo {
+    max-width: 120px; /* Rozmiar logo */
+    margin-bottom: 5px; /* Odstęp poniżej logo */
+    border-radius: 50%; /* Zaokrąglenie do formy okręgu */
+}
+.column#zoomIn img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.column#zoomIn:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+/* Flashcard Styles */
+#flashcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+#flashcard div {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+#flashcard div:hover {
+    transform: scale(1.05);
+}
+#word {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+#translation {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+#reset {
+    background-color: #590801;
+    border-radius: 125px;
+    content: "";
+    left: 4%;
+    opacity: .8;
+    position: center;
+    top: 0;
+    width: 25%;
+    transition: all .3s;
+    font-size: 18px;
+}
+#reset:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+button {
+    padding: 12px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 280px;
+}
+button:hover {
+    background-color: #590801;
+}
+#show-answer, #next-card {
+    background-color: #590801;
+    background-image: none;
+}
+
+/* Image Styles */
+#image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Menu Styles */
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hide transition overlay on initial load */
+.page-transition.hidden {
+    display: none;
+}
+
+/* Page Transition Effect */
+.page-transition {
+    position: fixed;
+    top: 100%; /* Start from below the viewport */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Default color */
+    z-index: 100;
+    pointer-events: none;
+    transform: translateY(0); /* Start off-screen at the bottom */
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), background-color 0.3s ease;
+}
+.page-transition.active {
+    transform: translateY(-100%); /* Move upwards to cover the screen */
+}
+
+/* Initial hidden state to avoid flash on load */
+.page-transition.hidden {
+    display: none;
+}

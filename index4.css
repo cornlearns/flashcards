@@ -8,12 +8,12 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #333;
-    background-image: url('img/backgroundapk.png');
+    background-image: url('img/backgroundapk4.png');
 }
 
 /* Container Styles */
 .container {
-    background-image: url('img/backgroundapk.png'); /* Tło kontenera */
+    background-image: url('img/backgroundapk4.png'); /* Tło kontenera */
     background-size: cover;
     background-position: center;
     padding: 30px;

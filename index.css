@@ -8,12 +8,12 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #333;
-    background-image: url('img/backgroundapk.png');
+    background-image: url('img/backgroundindex.png');
 }
 
 /* Container Styles */
 .container {
-    background-image: url('img/backgroundapk.png'); /* Tło kontenera */
+    background-image: url('img/backgroundindex.png'); /* Tło kontenera */
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -46,62 +46,10 @@ body {
   transform: scale(1.3);
 }
 
-/* Flashcard Styles */
-#flashcard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-#flashcard div {
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-#flashcard div:hover {
-    transform: scale(1.05);
-}
-#word {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-}
-#translation {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-    margin-top: 10px;
-}
-
 /* Button Styles */
-#reset {
-    background-color: #F46B49;
-    border-radius: 125px;
-    content: "";
-    left: 4%;
-    opacity: .8;
-    position: center;
-    top: 0;
-    width: 25%;
-    transition: all .3s;
-    font-size: 18px;
-}
-#reset:hover {
-  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
-  transform: scale(1.05);
-}
 button {
     padding: 12px 20px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 30px;
@@ -111,21 +59,10 @@ button {
     margin-top: 20px;
     width: 100%;
     max-width: 280px;
+    transition: background-color 0.3s;
 }
 button:hover {
-    background-color: #F46B49;
-}
-#show-answer, #next-card {
-    background-color: #F46B49;
-    background-image: none;
-}
-
-/* Image Styles */
-#image {
-    max-width: 60%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 15px;
+    background-color: #0056b3;
 }
 
 /* Menu Styles */
@@ -150,6 +87,25 @@ button:hover {
 }
 .menu ul li a:hover {
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Text Styles */
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
 
 /* Hide transition overlay on initial load */
@@ -178,3 +134,14 @@ button:hover {
 .page-transition.hidden {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
